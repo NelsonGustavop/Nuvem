@@ -40,7 +40,7 @@ public class Os implements Serializable {
 	}
 
 	public Os(Integer id, LocalDateTime dataAbertura, Prioridade prioridade,
-			String observacoes, Status status, Tecnico tecnico, Cliente cliente) {
+		String observacoes, Status status, Tecnico tecnico, Cliente cliente) {
 		super();
 		this.id = id;
 		this.setDataAbertura(LocalDateTime.now());
