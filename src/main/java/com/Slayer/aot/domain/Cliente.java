@@ -11,7 +11,7 @@ import javax.persistence.OneToMany;
 public class Cliente extends Pessoa implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	@OneToMany(mappedBy = "tecnico")
+	@OneToMany(mappedBy = "cliente")
 	private List<Os> list = new ArrayList<>();
 	public Cliente() {
 		super();

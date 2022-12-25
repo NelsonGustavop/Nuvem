@@ -12,7 +12,7 @@ public class Tecnico extends Pessoa implements Serializable{
 
 	
 	private static final long serialVersionUID = 1L;
-	@OneToMany(mappedBy = "cliente")
+	@OneToMany(mappedBy = "tecnico")
 	private List<Os> list = new ArrayList<>();
 	 
 	public Tecnico() {

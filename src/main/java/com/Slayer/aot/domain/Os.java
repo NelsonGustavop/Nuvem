@@ -37,6 +37,7 @@ public class Os implements Serializable {
 		this.setDataAbertura(LocalDateTime.now());
 		this.setPrioridade(Prioridade.BAIXA);
 		this.setStatus(Status.ABERTO);
+		
 	}
 
 	public Os(Integer id, LocalDateTime dataAbertura, Prioridade prioridade,
