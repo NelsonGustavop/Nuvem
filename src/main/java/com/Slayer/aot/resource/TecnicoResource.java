@@ -1,4 +1,7 @@
-package com.Slayer.aot.resource;
+ package com.Slayer.aot.resource;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -25,5 +28,15 @@ public class TecnicoResource {
 		return ResponseEntity.ok().body(objDTO);
 		
 	}
-
+	@GetMapping
+	public ResponseEntity<List<TecnicoDTO>> findAll(){
+		List<TecnicoDTO> listDTO = 
+	    service.findAll().stream().map(obj ->
+	    new TecnicoDTO(obj)).collect(Collectors.toList());
+		
+		return ResponseEntity.ok().body(listDTO);
+	//	List<Tecnico> list = service.finAll();
+	//	List<TecnicoDTO> listDTO = new ArrayList<>();
+	//	list.forEach(obj -> listDTO.add(new TecnicoDTO(obj)));
+	}
 }

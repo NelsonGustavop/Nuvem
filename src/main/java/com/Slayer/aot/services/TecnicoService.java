@@ -1,5 +1,6 @@
 package com.Slayer.aot.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.hibernate.ObjectNotFoundException;
@@ -19,4 +20,10 @@ public class TecnicoService {
 		Optional<Tecnico> obj = tcRep.findById(id);
 		return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado"+id+", tipo: "+ Tecnico.class.getName(), null));
 	}
+
+	public List<Tecnico> findAll() {
+		return tcRep.findAll();
+		
+	}
+	
 }
